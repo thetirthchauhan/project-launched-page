@@ -1,0 +1,90 @@
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #000000;
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            animation: fadeIn 1s ease-in;
+        }
+
+        .container {
+            display: flex;
+            gap: 50px;
+            justify-content: center;
+        }
+
+        .eye {
+            width: 120px;
+            height: 120px;
+            background: radial-gradient(circle, #ffffff 60%, #d1d1d1);
+            border-radius: 50%;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 4px solid #000000;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+        }
+
+        .pupil {
+            width: 40px;
+            height: 40px;
+            background: radial-gradient(circle, #000000 30%, #7801ff);
+            border-radius: 50%;
+            position: absolute;
+            transition: all 0.05s linear;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 1.0);
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes blink {
+
+            0%,
+            100% {
+                height: 40px;
+            }
+
+            50% {
+                height: 0;
+            }
+        }
+
+        .hero-section {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+            padding-top: 4rem;
+        }
+
+        .hero-section .overlay {
+            background: radial-gradient(circle at 50% 120%, rgba(0, 0, 0, 0.3), rgba(255, 255, 255, 0));
+            position: absolute;
+            inset: 0;
+        }
+
+        .hero-section .content {
+            position: relative;
+            z-index: 10;
+        }
